@@ -9,6 +9,8 @@ const _ = require('lodash');
 suite('Point API tests', function() {
   let points = fixtures.points;
   let newPoint = fixtures.newPoint;
+  let reviews = fixtures.reviews;
+  let newReview = fixtures.newReview;
   let newCategory = fixtures.newCategory;
   let newUser = fixtures.newUser;
 
@@ -26,20 +28,17 @@ suite('Point API tests', function() {
   });
 
   setup(async function() {
-    pointService.deleteAllCategories();
-    pointService.deleteAllPoints();
+    pointService.deleteAllReviews();
   });
 
-  teardown(async function() {});
+  teardown(async function() {
+    pointService.deleteAllReviews();
+  });
 
-  test('create a point', async function() {
-    const returnedCategory = await pointService.createCategory(newCategory);
-    await pointService.createPoint(returnedCategory._id, points[0]);
-    const returnedPoints = await pointService.getPoints(returnedCategory._id);
-    console.log(returnedPoints[0]);
-    console.log(points[0]);
-    assert.equal(returnedPoints.length, 1);
-    assert(_.some([returnedPoints[0]], points[0]), 'returnedPoint must be a superset of point');
+  test('create a review', async function () {
+    const returnedReview = await pointService.createReview(newReview);
+    assert(_.some([returnedReview], newReview), 'returnedCandidate must be a superset of newCandidate');
+    assert.isDefined(returnedReview._id);
   });
 
   test('create multiple points', async function() {
