@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css" type="text/css">
     <style>
         .map {
-            height: 400px;
+            height: 700px;
             width: 100%;
         }
     </style>
@@ -15,6 +15,7 @@
     <div id="map" class="map"></div>
     <script type="text/javascript">
         var map = new ol.Map({
+
             target: 'map',
             layers: [
                 new ol.layer.Tile({
@@ -22,8 +23,9 @@
                 })
             ],
             view: new ol.View({
-                center: ([56.1304, 106.3468]),
-                zoom: 4
+                center: ol.proj.fromLonLat([-5, 53]),
+                zoom: 7
+
             })
         });
     </script>

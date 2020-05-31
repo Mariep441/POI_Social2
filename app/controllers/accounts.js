@@ -99,6 +99,9 @@ const Accounts = {
         }
         user.comparePassword(password);
         request.cookieAuth.set({ id: user.id });
+        if (user.admin == true) {
+          return h.redirect('/admin');
+        }
         return h.redirect('/home');
       } catch (err) {
         return h.view('login', { errors: [{ message: err.message }] });

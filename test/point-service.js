@@ -96,9 +96,9 @@ class PointService {
   }
 
 
-  async createPoint(id, point) {
+  async createPoint(id, newPoint) {
     try {
-      const response = await axios.post(this.baseUrl + '/api/categories/' + id + '/points', point);
+      const response = await axios.post(this.baseUrl + '/api/categories/' + id + '/points', newPoint);
       return response.data;
     } catch (e) {
       return null;
@@ -146,6 +146,18 @@ class PointService {
   async clearAuth(user) {
     axios.defaults.headers.common['Authorization'] = '';
   }
+
+  async deleteAllReviews() {
+    try {
+      const response = await axios.delete(this.baseUrl + '/api/reviews');
+      return response.data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+
+
 }
 
 module.exports = PointService;

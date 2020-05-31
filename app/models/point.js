@@ -12,6 +12,10 @@ const pointSchema = new Schema({
       long: Number
   },
   image: Array,
+  rating:{
+    type: Schema.Types.ObjectId,
+    ref: 'Rating'
+  },
   category:{
     type: Schema.Types.ObjectId,
     ref: 'Category'

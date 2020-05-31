@@ -24,7 +24,11 @@ const Points = {
       const _id = request.params._id;
       const points = await Point.findById(_id).populate('contributor').populate('category').lean();
       const reviews = await Review.findByPoint(points).populate('point').populate('contributor').lean();
-      return h.view('details', {title: 'details', points: points, reviews: reviews});
+      let rating = 0;
+      reviews.forEach(review => {
+        rating += review.star/reviews.length;
+      });
+      return h.view('details', {title: 'details', points: points, reviews: reviews, rating: rating});
     }
   },
 
@@ -35,7 +39,7 @@ const Points = {
         const points = await Point.find().populate('contributor').populate('category').lean();
         const reviews = await Review.findByPoint(points).populate('point').populate('contributor').lean();
         let rating = 0;
-        return h.view('view_list_POI', {title: 'Points to Date', points: points, rating: rating});
+        return h.view('view_list_POI', {title: 'Points to Date', points: points, reviews:reviews, rating: rating});
       } catch (err) {
         return h.view('main', { errors: [{ message: err.message }] });
       }
