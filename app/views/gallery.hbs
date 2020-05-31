@@ -1,0 +1,11 @@
+{{> mainmenu _id="gallery" }}
+
+<section class="ui raised segment">
+    <div class="ui six wide grid">
+        {{#each images}}
+            <div class="ui medium images">
+                <img src="{{url}}">
+            </div>
+        {{/each}}
+    </div>
+</section>

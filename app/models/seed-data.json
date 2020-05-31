@@ -1,0 +1,384 @@
+{
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret"
+    },
+    "marge": {
+      "firstName": "Admin",
+      "lastName": "1",
+      "email": "admin@123.com",
+      "password": "123",
+      "admin": true
+    },
+    "bart": {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret"
+    }
+  },
+  "categories": {
+    "_model": "Category",
+    "TheSouthCoast": {
+      "costalZone": "The South Coast"
+    },
+    "TheNorthEast": {
+      "costalZone": "The North East"
+    },
+    "TheMidWest": {
+      "costalZone": "The Mid West"
+    },
+    "TheNorthWest": {
+      "costalZone": "The North West"
+    }
+  },
+
+  "points": {
+    "_model": "Point",
+    "one": {
+      "name": "**Burnt Island**",
+      "nameHtml": "<p><strong>Burnt Island</strong></p> ",
+      "safeName": "Burnt-Island",
+      "coordinates": {
+          "lat": 51.7725827,
+          "long": -10.0333317
+      },
+      "cursor": 57725,
+      "description": "Burnt Island V597-597 Sheet 83 / Sheet 84 Barely detached from the mainland at the very middle point of Castle Cove, this is a lovely chunky island. It bears the signs of pedestrian traffic accessing al LWs. The summit is at the S end. A navigation marker at the NW side that lines up with another to the NE to clear offshore reef Carriganglee. Attractive. Sallies. <strong>Illaunleagh</strong> V587595 Sheet 83 / Sheet 84 This island is located in the sheltered NE corner of W Cove Harbour. At HW the island forms an attractive backwater with a sheltered bay on its landward side. The island is probably accessible at LWN and certainly so at LWS from the mainland close to its N side. Landings are easiest along the N shoreline onto gently sloping seaweed and shingle foreshore. The vegetation is composed of rough grasses, bracken and gorse. The island can be explored easily enough in winter but would probably be heavy going during the summer months. There are a number of old stone walls surrounding a cut at the W end the purpose of which is now long lost as the island has not been grazed in many years. Water was not found and camping is not attractive. The inner bay area held Mallard, Curlew, Greenshank and Redshank in January 2012. Common Seals frequent the outer harbour area and evidence of Otter was found.</p> ",
+      "category": "->categories.TheSouthCoast",
+      "image" : [
+        {
+          "public_id" : "pbsfkirzl2ymfwiec0zd",
+          "version" : 1583602723,
+          "signature" : "af1aabc7c9f2a3e4e66ae8d4f1b44a57e6ead18e",
+          "width" : 1440,
+          "height" : 817,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:38:43Z",
+          "tags" : [],
+          "bytes" : 1008583,
+          "type" : "upload",
+          "etag" : "af85d036ea43fd714352ef39d7876f36",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583602723/pbsfkirzl2ymfwiec0zd.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583602723/pbsfkirzl2ymfwiec0zd.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "two": {
+      "name": "**Lough Foyle**",
+      "nameHtml": "<p><strong>Lough Foyle</strong></p> ",
+      "safeName": "Lough-Foyle",
+      "coordinates": {
+          "lat": 55.19369052,
+          "long": -6.96442359
+      },
+      "cursor": 142,
+      "description": "Lough Foyle C660-390 Sheet 3/4 Embarkation The logical embarkation point for the outer regions of Lough Foyle is Magilligan Point, by the Martello Tower. Access is by the B202 past the prison and rifle range. Do not block roads. Park by the hotel. The whole region is a security area, frequently patrolled. Especially beware of the military zone on the beach immediately to the E of the point, Benone Beach, on which it’s better not to land (certainly not while firing is going on). Accurate information for those passing the firing range can now be obtained from CANI. Further to the E, beyond the military zone, there is public access at about C716-363. There is a concrete slip across the beach. However, the beach surfs and there is a strong tidal drift. This may have relevance for launching. Expect caravans, lifeguards, and beach casting anglers. Military installations on both sides show the importance of the lough in such terms. The whole lough is less interesting inwards to the SW. There are large areas of mudflats on the E side. That said, it is a busy, well marked and well lit area. It is excellent for night navigation, sheltered but with strong tides. If paddling up into the city, it is possible to take out at Prehen Boat Club upstream of the Craigavon Bridge on the E bank. Road access is better on the Donegal side and there are nice secluded beaches. Greencastle at C648-400 lies directly across from Magilligan Point. The Donegal shore gets the more interesting up towards Inishowen Head at C685-438. The sea is much more exposed beyond the head. Tides Fierce tides push through the narrows. Rates of 3.5kn should not be treated lightly. Eddies on the Donegal side run from Warren Point to Moville and are usable on both flood and ebb. Moville HW is 3:50 after Belfast",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+        {
+          "public_id" : "htlf4zvagkxmndh1xztv",
+          "version" : 1583660251,
+          "signature" : "cbd7d6c157b986271169ec8bae3a7ef547e2c6cd",
+          "width" : 275,
+          "height" : 183,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-08T09:37:31Z",
+          "tags" : [],
+          "bytes" : 8026,
+          "type" : "upload",
+          "etag" : "d091c9bcb96a87fdc94272ccea291447",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583660251/htlf4zvagkxmndh1xztv.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583660251/htlf4zvagkxmndh1xztv.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        },
+        {
+          "public_id" : "jpfxskau9x2p5fvszxsu",
+          "version" : 1583660259,
+          "signature" : "dfc822268a1a498391ce574d5990b2fff555f277",
+          "width" : 276,
+          "height" : 183,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-08T09:37:39Z",
+          "tags" : [],
+          "bytes" : 7192,
+          "type" : "upload",
+          "etag" : "2f202f5978e39a679d8fe77572c2059e",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583660259/jpfxskau9x2p5fvszxsu.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583660259/jpfxskau9x2p5fvszxsu.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "three": {
+      "name": "**Downhill**",
+      "coordinates": {
+          "lat": 55.16721802,
+          "long": -6.81917323
+      },
+      "description": "<p><strong>Downhill</strong> C753-362 Sheet 4 There is public access at the extreme E end of Benone Beach at a point called Downhill Strand. The Downhill Hotel was closed and demolished. An apartment block now fills the gap. Parking and toilets are beside the apartments and access is by a stream through an archway under the railway. This spot is popular with anglers. The rocky area to the E of the prominent Mussenden Temple at C758-363 is loose basalt, eroded to provide caves and arches. Fulmar and Kittiwake thrive on the sewerage outfall. There is good access and parking at Castlerock village itself at C766-365, where there is parking and toilets at the beach access point. <strong>County Antrim</strong> Tidal overview On the north coast, the tide generally turns west at Belfast HW and east at Belfast LW. The tides are complex, particularly around Rathlin and should be studied carefully. Tides flow strongly at the headlands but there are usable eddies between.</p> ",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+        {
+          "public_id" : "y32obdvbpbg6twje2off",
+          "version" : 1583660405,
+          "signature" : "832be8af6e4ca2464204a56da7a7a9cc4e815158",
+          "width" : 186,
+          "height" : 121,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-08T09:40:05Z",
+          "tags" : [],
+          "bytes" : 4242,
+          "type" : "upload",
+          "etag" : "b4bd39ddb77e32a44b126d0eaf6f9cc4",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583660405/y32obdvbpbg6twje2off.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583660405/y32obdvbpbg6twje2off.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "four": {
+      "name": "**River Bann**",
+      "coordinates": {
+          "lat": 55.17124307,
+          "long": -6.77197253
+      },
+      "description": "River Bann C783-367 Sheet 4 To the E of Castlerock village is the Bar Mouth, where the River Bann flows into the sea. Turbulent water can be experienced quite a distance offshore. The flood at the mouth is weak by comparison to the ebb. Especially when the river is up, the ebb and the flow of the river combine to produce mighty standing waves. The flow of the river is controlled by floodgates well upstream. Powerful rip currents either side of the mouth are dangerous enough. The mouth artificially narrows the stream and this projects the fresh water out with great force. The fresh water is easily distinguished in the sea water and gives a good guide as to tide direction and strength off the beaches. The river is marked as far up as Coleraine. The area is a noted birding spot in winter.</p> ",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+        {
+          "public_id" : "jgvlclboh1yrsmvsvq8e",
+          "version" : 1583601468,
+          "signature" : "cdd45fcd4f17c53597ad0f9cec725fff959e7589",
+          "width" : 289,
+          "height" : 174,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:17:48Z",
+          "tags" : [],
+          "bytes" : 10647,
+          "type" : "upload",
+          "etag" : "df223eeb8bb7fc4f56183c32a3d181ba",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583601468/jgvlclboh1yrsmvsvq8e.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583601468/jgvlclboh1yrsmvsvq8e.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        },
+        {
+          "public_id" : "ktywpbsno6ijznui8kel",
+          "version" : 1583601646,
+          "signature" : "d6a48a7b81634ffe575b0200da645692abd2c77f",
+          "width" : 662,
+          "height" : 439,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:20:46Z",
+          "tags" : [],
+          "bytes" : 68937,
+          "type" : "upload",
+          "etag" : "42d2a8d3084b794c9ec0b5ebfaadf7b0",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583601646/ktywpbsno6ijznui8kel.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583601646/ktywpbsno6ijznui8kel.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "five": {
+      "name": "**Portstewart**",
+      "coordinates": {
+          "lat": 55.18778894,
+          "long": -6.72122191
+      },
+      "description": "Portstewart C815-386 Sheet 4 The area behind Portstewart Strand to the W of the town is part golf course and part National Trust. There is fee-paying access to the NT section, where there are toilets and parking. There is a powerful rip each end of the strand. When the strand is dumping, it is better to launch off a slip at Portnahapple at C813-376, which is usable in most conditions, but be aware that access is difficult from car parks in the area.. The harbour at C815-386 can be difficult to enter or exit in heavy seas, with multi-directional reflected waves. The slip is exposed to surge. There is good parking and this is the access of choice in calm conditions. There is some interesting rock hopping locally, clapotis almost always and some small caves and a blowhole that performs well in good swell. The tide can run fast around Portstewart Point.</p> ",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+        {
+          "public_id" : "nr4autrli2zn53zwayru",
+          "version" : 1583601817,
+          "signature" : "d67a46fe285408d2fb5020ce89bde06e2967f6aa",
+          "width" : 380,
+          "height" : 247,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:23:37Z",
+          "tags" : [],
+          "bytes" : 20276,
+          "type" : "upload",
+          "etag" : "f5df885b4753cd80117687e173200df5",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583601817/nr4autrli2zn53zwayru.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583601817/nr4autrli2zn53zwayru.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        },
+        {
+          "public_id" : "kk8oohoaa2ywmoqrji9x",
+          "version" : 1583601828,
+          "signature" : "0eb6c0ff873c56be811551fe2c519d563c23e39c",
+          "width" : 275,
+          "height" : 183,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:23:48Z",
+          "tags" : [],
+          "bytes" : 8514,
+          "type" : "upload",
+          "etag" : "1fc9244768d325459fe2bab62d8e16f7",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583601828/kk8oohoaa2ywmoqrji9x.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583601828/kk8oohoaa2ywmoqrji9x.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "six": {
+      "name": "**Portstewart to Portrush**",
+      "coordinates": {
+          "lat": 55.18778894,
+          "long": -6.72122191
+      },
+      "description": "Portstewart to Portrush C815-386 to C856-407 Sheet 4 The coastline here is basalt and reasonably interesting, low lying at first. Rinagree Point at C833-397 is the halfway point. To its W is Black Rock and just off it lies Lawson’s Rock, which breaks even in a moderate swell. It is possible to shelter in the lee of Black Rock. There is a tiny storm beach accessible from landward just E of Rinagree Point. Boomers may be expected hereabouts. Rock hopping and narrow channels are best enjoyed in calmer conditions and at about HW. Tides An eddy runs west on the flood tide between Ramore Head to the Bann Barmouth from 2 hours before Belfast HW.</p> ",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+        {
+          "public_id" : "ueksvnyl7oihkcridmsf",
+          "version" : 1583603518,
+          "signature" : "e77f3ffdc88e9fd5c004223b7045f35fdf307b25",
+          "width" : 259,
+          "height" : 194,
+          "format" : "jpg",
+          "resource_type" : "image",
+          "created_at" : "2020-03-07T17:51:58Z",
+          "tags" : [],
+          "bytes" : 8525,
+          "type" : "upload",
+          "etag" : "303ef25f379529dee4d99bcfd6152910",
+          "placeholder" : false,
+          "url" : "http://res.cloudinary.com/drl4tdtjm/image/upload/v1583603518/ueksvnyl7oihkcridmsf.jpg",
+          "secure_url" : "https://res.cloudinary.com/drl4tdtjm/image/upload/v1583603518/ueksvnyl7oihkcridmsf.jpg",
+          "original_filename" : "temp",
+          "original_extension" : "img"
+        }
+      ]
+    },
+    "seven": {
+      "name": "**The Skerries – Portrush**",
+      "coordinates": {
+          "lat": 55.22358133,
+          "long": -6.62578557
+      },
+      "description": "The Skerries – Portrush C875-427 Sheet 4 These rocky islands lie about 2km NE of Portrush. The islands are basalt and the N side is ‘steep to’ and usually has unsettled sea conditions as the tide and swell often work in opposition. They are mostly grassy and low on the S side. Strong tide races set between the islands and associated rocks to their N. The sheltered S side is usually settled, and the best landing on the large skerry is towards the E end where there is almost a gap in the island. The Skerries are privately owned so get permission to land from Mr Metson in Portrush at 028 70857412, especially if intending to camp. There is a small brackish lake on the large skerry. Large numbers of birds nest and some rabbits survive. The best embarkation point is at Portandoo Harbour at C857-412 on the NE part of the headland, which is well sheltered. The rocks S of the harbour are a nature reserve and of interest to the geologist for its ammonite exposures. There are Grey Seal and a small colony of Common Seal. The Storks at C897-425 are rocks lying 2km ESE of the Skerries, and 1km NNW of Dunluce Castle. They are marked by a tall, unlit red beacon. Fishing is good hereabouts. <p>On the east-going flood, there is an eddy between Curran Point at C875-411 to Reviggerly at C855-415. HW Portrush is 4:40 before Belfast HW. ",
+      "category": "->categories.TheNorthEast",
+      "image" : [
+      ]
+    },
+    "eight": {
+      "name": "**Annagh Island**",
+      "coordinates": {
+          "lat": 53.97646122,
+          "long": -9.85407925
+      },
+      "description": "Annagh Island  F784-046 Sheet 22/30 This huge island is almost 3km2. It is flat as a pancake and mostly ungrazed bog. There are some stands of forestry in the SW. The landing spot is anywhere but essentially where the Inishbiggle vehicular access penetrates at a boathouse at F784-046. There is a house and shed at the mid-S and similar at the NE. Neither is occupied regularly. It is possible to drive from the mainland across the inner sound at a spot called locally Claggan F786–046 to F783-046 on Annagh, for a couple of hours when the sound dries at LW. There is a fine boreen across Annagh S of centre to about F773-053, from where the strand to Inishbiggle can be driven for the bottom half of the tide. 6 hours dry and 6 wet is the rule, springs or neaps.</p> ",
+      "category": "->categories.TheMidWest",
+      "image" : [
+      ]
+    },
+    "nine": {
+      "name": "**Duvillaun Mór**",
+      "coordinates": {
+          "lat": 54.07088729,
+          "long": -10.17148284
+      },
+      "description": "Duvillaun Mór F579-157 Sheet 22 Landing The current owner discourages landing. There is an unreliable landing place on a somewhat sheltered sandy beach (bouldery at LW) on the southern shore at a point marked Gubnageeragh. The scramble up is awkward, but tired paddlers from Achill Head may take advantage. There is camping above the beach. Water is available in small lakes at the top of the island. Otherwise the much more reliable landing point in calm conditions is in a shallow bay on the NE side, almost facing Duvillaun Beg. Land onto flat rocks, in a sheltered cut, best just NW of a ruined dwelling. The island was abandoned in the early 20<sup>th</sup> Century. In the 1821 census, there were 19 people living on the island, and a community existed here up to at least 1917. The ecclesiastical remains on the brow of the hill at the western end are of a small Anchorite settlement being an eremitic establishment from the 6<sup>th</sup> to 10<sup>th</sup> Centuries. The square ruin is a killeen, a children’s’ graveyard. A carved flat stone on the summit depicts a Greek crucifixion on one side and a pre-Celtic cross (with a circle surrounding the cross) on the other. Well worth the visit. Unfortunately the most prominent feature of the top of the island these days, begun in 2007, is the “work in progress” of a modern house, unsightly in 2010, unless and until it is finshed. There is also a covered shed, and a forty-foot container. Overall, it is a mess. This epitomises the tragic mismanagment of our wild islands. The application for this development was granted planning permission to build on an SPA, so the Parks &amp; Wildlife service now have the massive headache of trying to limit the damage done. The N/W end is wild and dramatic, with small sea stacks and islets lying off the shore. The whole N and W sides are worthy of a slow passage. Good cuts and stacks, and in particular two fine sea arches, merit exploration. One horsehoe shaped sea arch near Drumacappul Island F570-160 has a very distinctive quartize keystone at its apex. The other one cuts through Turduvillaun F566-160 and is a challenging passage. SPA Storm &amp; Leach’s Petrel, Barnacle Goose, Peregrine, Chough, Arctic &amp; Little Tern. Lapwing and Greater Black-backed Gull breed and there is a colony of black rabbits.</p> ",
+      "category": "->categories.TheMidWest",
+      "image" : [
+      ]
+    },
+    "ten": {
+      "name": "**Inishinny**",
+      "coordinates": {
+          "lat": 55.0104251,
+          "long": -8.45089243
+      },
+      "description": "Inishinny B712-182 Sheet 1 1<em>km</em> N of Cloch Ghlas, this medium sized island is reachable on foot from mid-tide, and is well grazed by sheep and even a donkey, especially at its E end. Short cropped grass gives excellent camping. Lazybeds. Little bays and big bays yield lots of exploration. That N facing inside Bent Island at the NE is a natural sheltered harbour for smaller boats. The W facing harbour in the W is less sheltered altogether. Common Sandpiper. Ringed Plover. Ruin in mid-island. <strong>Aran Sound South</strong> The South Sound of Aran on the E side of Aran is a fearsome place with a high swell, particularly if the swell is from the N. The safest N/S passage goes approximately 200m east of Aileen Reef. Aileen Reef extends SE for 1<em>km</em> from Cloghcor Point at the SE corner of Aran. Boomers may be experienced over the shallows on the E side of the sound at a point E of Cloghcor Pt., off the beach on Rutland. You may also encounter boomers immediately west of the Carrickbealatroha Upper rocks beacon B695-147, which is shown but not named on the 1:50,000 OS map. If you plan to paddle from the village (Leabgarrow) on Aranmore to Burtonport via the S end of Rutland, with swell about, it is best to follow the channel S to Clutch beacon, marking the S end of Aileen Reef and then turn E, aiming for the beacon on the S end of Rutland. This should avoid any of the breaks on the E side of the Sound. <strong>Aran Sound North</strong> A large swell runs through the Sound of Aran in strong north-westerlies. At the N end, Blind Rocks at B686-166 and Ballagh Rocks at B693-170 are places to be avoided. Blind Rocks are just E of Calf Island and Ballagh Rocks (marked on the 1:50,000 OS map) are 0.6<em>km</em> NW of Eighter Island. In these conditions, the North Sound is virtually closed. Waves frequently break <em>over</em> the Ballagh rock light (10m high). This lighthouse was built in the autumn of 1875 and was originally known as Black Rock. It was converted to electric batteries in 1983. Waves also break over the Black Rock beacon (red) just off Leabgarrow pier. If in doubt, follow the ferry route around the N end of the beacon and then down to the beach and the landing described in the Aranmore section.</p> ",
+      "category": "->categories.TheNorthWest",
+      "image" : [
+      ]
+    },
+    "eleven": {
+      "name": "**Garvan Isles**",
+      "coordinates": {
+          "lat": 55.38657777,
+          "long": -7.31282475
+      },
+      "description": "Garvan Isles C436-602 Sheet 3 About 2<em>km</em> NE of Malin Pier, which is 4<em>km</em> E of Malin Head, the Garvan Isles are widely reputed to be no more than inhospitable, weathered quartzite rocks, named from the Irish ‘Na Garbh Oileáin’ meaning ‘Islands of the Rough Sea’. There are three small islands, White Isle, Middle Isle, and Green Isle, all three names logical, as one has grass atop. Middle Isle does too actually, and is the easiest to land on. The landing is on the N side through a tiny keyhole slot onto stones, strictly one at a time. Local fishermen say that to land sheep to graze Middle Isle, they used to manoeuvre a boat right up to the mouth of the slot and throw the sheep overboard. The sheep did the rest. Tides do run awfully fast through the Isles, setting up mighty races that must be fun to play in under the right circumstances and should be very much avoided otherwise.</p> ",
+      "category": "->categories.TheNorthWest",
+      "image" : [
+      ]
+    },
+    "twelve": {
+      "name": "**The Cliffs of Moher**",
+      "coordinates": {
+          "lat": 52.93863481,
+          "long": -9.38695791
+      },
+      "description": "<p><strong>The Cliffs of Moher</strong> R068-884 to R058-971 Sheet 51/Sheet 57 To the N of Liscannor are the famous Cliffs of Moher, running NNE for 16<em>km</em> or more from Hag’s Head at R011-897. Hag’s Head lies 3<em>km</em> W of Furreera (R042-880 Sheet 57) in Liscannor Bay, or about 6<em>km</em> W of Liscannor Harbour (one of Nimmo’s). Small parties will start or finish this classic excursion at Furreera. Larger parties may prefer Liscannor, as it has the better parking, easy access at the harbour, and in the village itself, facilities including restaurants, pubs, hotel and hostel. The Cliffs of Moher are the highest vertical cliffs in Ireland. Except for one stack off O’Brien’s Tower, and a few storm beaches, landings are few. Even then, these are only accessible in very settled conditions. These cliffs provide the most dramatic and committing day paddle in Ireland. If doing the Cliffs of Moher, choose light winds, or south-easterlies, which will wash over the top. Supreme Surfing Wave <em>Aill na Searrach</em> (a.k.a. <em>Aileens</em>) is Ireland’s biggest and best surfing wave, at over 10m, thought to be among the top five waves in the world. The wave is close inshore, just N of Branaunmore. It was known for years but never surfed until recently. Efforts began October 2004 but standard techniques were found wanting. Surfers came from Australia, USA and the UK to try their luck. Eventually on 15<sup>th</sup> October 2005, surfers were brought out to the site from Doolin. Getting onto the wave involves being towed a by jet-ski, which then makes a hasty retreat, tactics not then necessary anywhere else in Ireland. Conditions only get suitable a few times every year. The wave spills into the base of the cliffs themselves, so its danger is not just its size. Keep away, unless you are one of a very small handful of experts. Doolin claims, with some validity, to be the secret capital of Irish music. It is Mecca to every hitchhiker and cycling tourist under the age of sixty to visit Ireland. Doolin boasts excellent music, hostels, camping (in a paying site conveniently at the harbour), seafood restaurants, chippers, as well as everything touristy. Doolin Pier at R057-970, Sheet 51 is the obvious embarkation place for the Aran Islands. Inisheer lies 8<em>km</em> to the WNW, or 10<em>km</em> to the main beach. The slipway at Doolin pier is steep, less than well sheltered, and busy. Parking in summer is easier just 100m N, in front of the campsite. The launching is no more difficult off the rocky beach, despite a small, awkward carry. There is no other embarkation for many a cliff-bound mainland mile on either side. Day excursions either side of Doolin are committing and amongst the best in the country. Going S the first get out is approx 15<em>km</em> at Liscannor and even this is weather dependant. Going N the next get out is approx 16<em>km</em> at Fanore and this is very weather dependant also. After this the certain get out is at Gleninagh Pier another 8<em>km</em> further on, inside Galway Bay. Doolin has a coast and cliff rescue service. Contact Mattie Shanahan at 065 – 7074415, the leader of the local Coastguard (Doolin) Unit. Local information may be had from any of the local ferrymen, there being a number of busy, small ferry routes to the islands. SPA Peregrine, Chough.</p> ",
+      "category": "->categories.TheMidWest",
+      "image" : [
+      ]
+    },
+    "thirteen": {
+      "name": "**Illaunloo**",
+      "coordinates": {
+          "lat": 53.15130256,
+          "long": -9.16360716
+      },
+      "description": "<p><strong>Illaunloo</strong> M222-118 Sheet 51 Shown on the OS half-inch Sheet 14, but missing from the 1:50,000 Sheet 51. A rocky islet which makes a good waystop on a day paddle in S Galway Bay. Land on the downwind side, mostly easily. Neither water nor camping.</p> ",
+      "category": "->categories.TheMidWest",
+      "image" : [
+      ]
+    }
+  },
+  "reviews": {
+    "_model": "Review",
+    "first": {
+      "user": "->users.homer",
+      "point": "->points.one",
+      "comment": "This was a very pleasant day",
+      "star": "4"
+    },
+    "second": {
+      "user": "->users.homer",
+      "point": "->points.two",
+      "comment": "This was a very pleasant day",
+      "star": "4"
+    },
+    "third": {
+      "user": "->users.homer",
+      "point": "->points.two",
+      "comment": "Very bad",
+      "star": "1"
+    }
+  }
+}

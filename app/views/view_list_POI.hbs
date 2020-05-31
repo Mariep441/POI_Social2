@@ -1,0 +1,49 @@
+{{> mainmenu _id="view_list_POI" }}
+
+{{#group points by="category.costalZone"}}
+    <h3>{{value}}</h3>
+    <div class="ui six wide grid">
+        <table class="ui green celled table segment">
+            <thead>
+            <tr>
+                <th>Icone</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Contributor</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each items}}
+                <tr>
+                    <td>
+
+                        <a href="/details/view_POI/{{_id}}" class="ui icon button">
+                        <i class="icon teal marker"></i>
+
+                        <a href="/details/view_edit_POI/{{_id}}" class="ui icon button">
+                        <i class="icon edit"></i>
+
+                        <a href="/details/delete_POI/{{_id}}" class="ui icon button">
+                        <i class="icon red trash"></i>
+
+                        <a href="/details/view_upload_image/{{_id}}" class="ui icon button">
+                        <i class="icon camera"></i>
+
+
+                    </td>
+                    <td> {{name}} </td>
+                    <td> {{description}} </td>
+                    <td> {{rating}} </td>
+                    <td> {{coordinates.lat}} </td>
+                    <td> {{coordinates.long}} </td>
+                    <td> {{contributor.firstName}} {{contributor.lastName}} </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+{{/group}}
+</section>

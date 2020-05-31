@@ -1,0 +1,30 @@
+{{> mainmenu _id="add_review" }}
+
+<section class="ui raised segment">
+    <div class="ui form column stacked segment">
+        <form action="/add_review" method="POST">
+            <div class="field">
+                <label>Comment</label>
+                <input placeholder="Comment" type="text" name="comment">
+            </div>
+            <div class="field">
+                <label>Star</label>
+                <input placeholder="Star" type="text" name="star">
+            </div>
+            <div class="field">
+                <label>Point</label>
+                {{#each points }}
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="point" value="{{name}}">
+                            <label>{{name}}</label>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            <button class="ui blue submit button">Add Review</button>
+        </form>
+        {{> error }}
+    </div>
+</section>

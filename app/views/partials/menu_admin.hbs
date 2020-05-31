@@ -1,0 +1,23 @@
+<nav class="ui inverted menu">
+    <div class="ui inverted menu">
+        <div class="ui pointing dropdown link item">
+            <span class="text">Contribute</span>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <a id="view_add_POI" class= "item" href="/view_add_POI"> Add a Point of Interest</a>
+                <a id="view_add_review" class= "item" href="/view_add_review"> Add a Review</a>
+                <a id="view_all_categories" class= "item" href="/view_all_categories"> Add a Category</a>
+                <a id="gallery" class= "item" href="/gallery"> Gallery</a>
+            </div>
+        </div>
+    </div>
+    <div class="right menu">
+        <a id="admin"   class= "item" href="/admin"> Admin</a>
+        <a id="logout" class= "item" href="/logout"> Logout</a>
+        <a id="settings" class= "item" href="/settings"> Settings</a>
+    </div>
+</nav>
+
+<script>
+    $("#{{_id}}").addClass("active item");
+</script>

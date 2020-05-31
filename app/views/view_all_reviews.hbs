@@ -1,0 +1,37 @@
+{{> mainmenu _id="view_all_reviews" }}
+
+<h3>Review</h3>
+    <div class="ui six wide grid">
+        <table class="ui green celled table segment">
+            <thead>
+            <tr>
+                <th>View Point</th>
+                <th>Comment</th>
+                <th>Stars</th>
+                <th>Point</th>
+                <th>Contributor</th>
+                <th>Delete Review</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each reviews}}
+                <tr>
+                    <td>
+                        <a href="/details/view_POI/{{point._id}}" class="ui icon button">
+                        <i class="icon teal marker"></i>
+                    </td>
+                    <td> {{comment}} </td>
+                    <td> {{star}} </td>
+                    <td> {{point.name}} </td>
+                    <td> {{contributor.firstName}} {{contributor.lastName}} </td>
+                    <td>
+                        <a href="/delete_review/{{_id}}" class="ui icon button">
+                        <i class="icon red trash"></i>
+                   </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+</section>

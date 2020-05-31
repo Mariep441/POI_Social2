@@ -1,0 +1,23 @@
+{{> menu_admin _id="admin" }}
+
+<p>List of all users</p>
+
+
+<div class="ui relaxed divided list">
+    {{#each user}}
+        <div class="item">
+            <i class="large user middle aligned icon"></i>
+            <div class="content">
+                <div class="header">
+                    <a href="/admin_edit_user/{{_id}}"> {{firstName}} {{lastName}}</a>
+                    <a href="/admin_delete_user/{{_id}}"> <i class="ui red icon trash"></i></a>
+                    <p class="description"> {{numberPoints}} </p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+
+<p>List of all points</p>
+{{numberPoints}}

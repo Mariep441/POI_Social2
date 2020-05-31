@@ -1,0 +1,16 @@
+<section class="ui raised segment">
+    <div class="ui segment">
+        <div class= "column">
+            {{#each points.image}}
+                <div class="ui small card">
+                    <div class="image">
+                        <img src="{{url}}">
+                    </div>
+                    <div class="content">
+                        <a href=/deleteImage/{{public_id}}> <i class="icon red trash"></i></a>{{public_id}}
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        <div>
+</section>
