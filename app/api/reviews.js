@@ -4,7 +4,7 @@ const Point = require('../models/point');
 const Boom = require('@hapi/boom');
 const Category = require('../models/category');
 const utils = require('./utils.js');
-const Reviews = require('../models/review');
+const Review = require('../models/review');
 
 const Reviews = {
   findAll: {
@@ -42,6 +42,29 @@ const Reviews = {
       return review;
     }
   },
+
+
+  create: {
+    auth: {
+      strategy: 'jwt',
+    },
+    handler: async function(request, h) {
+      const userId = utils.getUserIdFromRequest(request);
+      let review = new Review(request.payload);
+      const point = await Point.findOne({ _id: request.params.id });
+      if (!point) {
+        return Boom.notFound('No Point with this id');
+      }
+      review.point = point._id;
+      review.contributor = userId;
+      review = await review.save();
+      if (review) {
+        return h.response(review).code(201);
+      }
+      return Boom.badImplementation('error creating review');
+    }
+  },
+
 
   deleteOne: {
     auth: {

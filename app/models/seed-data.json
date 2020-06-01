@@ -360,19 +360,19 @@
       "user": "->users.homer",
       "point": "->points.one",
       "comment": "This was a very pleasant day",
-      "star": "4"
+      "star": 4
     },
     "second": {
       "user": "->users.homer",
       "point": "->points.two",
       "comment": "This was a very pleasant day",
-      "star": "4"
+      "star": 4
     },
     "third": {
       "user": "->users.homer",
       "point": "->points.two",
       "comment": "Very bad",
-      "star": "1"
+      "star": 1
     }
   }
 }
