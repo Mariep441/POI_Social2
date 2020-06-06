@@ -8,7 +8,6 @@ const _ = require('lodash');
 
 suite('Point API tests', function() {
   let points = fixtures.points;
-  let newPoint = fixtures.newPoint;
   let newCategory = fixtures.newCategory;
   let newUser = fixtures.newUser;
 
@@ -36,8 +35,6 @@ suite('Point API tests', function() {
     const returnedCategory = await pointService.createCategory(newCategory);
     await pointService.createPoint(returnedCategory._id, points[0]);
     const returnedPoints = await pointService.getPoints(returnedCategory._id);
-    console.log(returnedPoints[0]);
-    console.log(points[0]);
     assert.equal(returnedPoints.length, 1);
     assert(_.some([returnedPoints[0]], points[0]), 'returnedPoint must be a superset of point');
   });
@@ -49,10 +46,9 @@ suite('Point API tests', function() {
     }
     const returnedPoints = await pointService.getPoints(returnedCategory._id);
     assert.equal(returnedPoints.length, points.length);
-    console.log(returnedPoints[i]);
-    console.log(points[i]);
+
     for (var i = 0; i < points.length; i++) {
-      assert(_.some([returnedPoints[0]], points[0]), 'returnedPoint must be a superset of point');
+      assert(_.some([returnedPoints[i]], points[i]), 'returnedPoint must be a superset of point');
     }
   });
 

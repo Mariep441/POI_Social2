@@ -25,6 +25,23 @@ const Points = {
       return points;
     }
   },
+  findOne: {
+    auth: {
+      strategy: 'jwt',
+    },
+    handler: async function(request, h) {
+      try {
+        const point = await Point.findOne({ _id: request.params.id });
+        if (!point) {
+          return Boom.notFound('No Point with this id');
+        }
+        return point;
+      } catch (err) {
+        return Boom.notFound('No Point with this id');
+      }
+    }
+  },
+
   create: {
     auth: {
       strategy: 'jwt',
