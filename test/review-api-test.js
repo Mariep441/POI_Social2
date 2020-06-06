@@ -6,13 +6,13 @@ const fixtures = require('./fixtures.json');
 const _ = require('lodash');
 
 
-suite('Point API tests', function() {
-  let points = fixtures.points;
-  let newPoint = fixtures.newPoint;
+suite('Review API tests', function() {
   let reviews = fixtures.reviews;
   let newReview = fixtures.newReview;
-  let newCategory = fixtures.newCategory;
   let newUser = fixtures.newUser;
+  let points = fixtures.points;
+  let newCategory = fixtures.newCategory;
+  let newPoint = fixtures.newPoint;
 
   const pointService = new PointService(fixtures.pointService);
 
@@ -35,57 +35,84 @@ suite('Point API tests', function() {
     pointService.deleteAllReviews();
   });
 
-  test('create a review', async function () {
-    const returnedReview = await pointService.createReview(newReview);
-    assert(_.some([returnedReview], newReview), 'returnedCandidate must be a superset of newCandidate');
-    assert.isDefined(returnedReview._id);
-  });
-
-  test('create multiple points', async function() {
+  test('create a review', async function() {
     const returnedCategory = await pointService.createCategory(newCategory);
-    for (var i = 0; i < points.length; i++) {
-      await pointService.createPoint(returnedCategory._id, points[i]);
-    }
-    const returnedPoints = await pointService.getPoints(returnedCategory._id);
-    assert.equal(returnedPoints.length, points.length);
-    console.log(returnedPoints[i]);
-    console.log(points[i]);
-    for (var i = 0; i < points.length; i++) {
-      assert(_.some([returnedPoints[0]], points[0]), 'returnedPoint must be a superset of point');
-    }
+    console.log(returnedCategory);
+    await pointService.createPoint(returnedCategory._id, points[0]);
+    const returnedPoint = await pointService.createPoint(returnedCategory._id,newPoint);
+    console.log(returnedPoint);
+    await pointService.createReview(returnedPoint._id, reviews[0]);
+    const returnedReviews = await pointService.getReviews(returnedPoint._id);
+    console.log(returnedReviews[0]);
+    console.log(reviews[0]);
+    assert.equal(returnedReviews.length, 1);
+    assert(_.some([returnedReviews[0]], reviews[0]), 'returned review must be a superset of review ');
   });
 
-  test('delete a point', async function () {
+
+  test('get a review', async function () {
     const returnedCategory = await pointService.createCategory(newCategory);
     await pointService.createPoint(returnedCategory._id, points[0]);
-    let p = await pointService.createPoint(returnedCategory._id, points[0]);
-    assert(p._id != null);
-    await pointService.deleteOnePoint(p._id);
-    p = await pointService.getPoints(p._id);
-    assert(p._id == null);
+    const returnedPoint = await pointService.createPoint(returnedCategory._id,newPoint);
+    await pointService.createReview(returnedPoint._id, reviews[0]);
+    const r1 = await pointService.getReviews(returnedPoint._id);
+    console.log(r1);
+    const r2 = await pointService.getReviews(r1._id);
+    console.log(r2);
+    assert.deepEqual(r1, r2);
+  });
+
+  test('get invalid review', async function () {
+    const r1 = await pointService.getReview('1234');
+    assert.isNull(r1);
+    const r2 = await pointService.getReview('012345678901234567890123');
+    assert.isNull(r2);
   });
 
 
-
-  test('delete all points', async function() {
-    const returnedCategory = await pointService.createCategory(newCategory);
-    for (var i = 0; i < points.length; i++) {
-      await pointService.createPoint(returnedCategory._id, points[i]);
+  test('get all reviews', async function () {
+    for (let r of reviews) {
+      const returnedCategory = await pointService.createCategory(newCategory);
+      await pointService.createPoint(returnedCategory._id, points[0]);
+      const returnedPoint = await pointService.createPoint(returnedCategory._id,newPoint);
+      await pointService.createReview(returnedPoint._id, reviews[0]);
+      await pointService.createReview(r);
     }
 
-    const d1 = await pointService.getPoints(returnedCategory._id);
-    assert.equal(d1.length, points.length);
-    await pointService.deleteAllPoints();
-    const d2 = await pointService.getPoints(returnedCategory._id);
-    assert.equal(d2.length, 0);
+    const allReviews = await pointService.getReviews();
+    assert.equal(allReviews.length, reviews.length);
   });
 
-  test('create a point and check contributor', async function() {
+  test('get reviews detail', async function () {
+    for (let r of reviews) {
+      const returnedCategory = await pointService.createCategory(newCategory);
+      await pointService.createPoint(returnedCategory._id, points[0]);
+      const returnedPoint = await pointService.createPoint(returnedCategory._id,newPoint);
+      await pointService.createReview(returnedPoint._id, reviews[0]);
+    }
+
+    const allReviews = await pointService.getReviews();
+    for (var i = 0; i < reviews.length; i++) {
+      assert(_.some([allReviews[i]], reviews[i]), 'returnedReview must be a superset of newReview');
+    }
+  });
+
+  test('get all reviews empty', async function () {
+    const allReviews = await pointService.getReviews();
+    assert.equal(allReviews.length, 0);
+  });
+
+
+  test('delete a review', async function () {
     const returnedCategory = await pointService.createCategory(newCategory);
     await pointService.createPoint(returnedCategory._id, points[0]);
-    const returnedPoints = await pointService.getPoints(returnedCategory._id);
-    assert.isDefined(returnedPoints[0].contributor);
-    const users = await pointService.getUsers();
-    assert(_.some([users[0]], newUser), 'returnedUser must be a superset of newUser');
+    const returnedPoint = await pointService.createPoint(returnedCategory._id,newPoint);
+    await pointService.createReview(returnedPoint._id, reviews[0]);
+    let r = await pointService.getReviews(returnedPoint._id);
+    assert.isNotNull(r);
+    await pointService.deleteOneReview(r._id);
+    r = await pointService.getReview(r._id);
+    assert(r == null);
   });
+
 });

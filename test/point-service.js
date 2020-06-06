@@ -132,7 +132,6 @@ class PointService {
     }
   }
 
-
   async authenticate(user) {
     try {
       const response = await axios.post(this.baseUrl + '/api/users/authenticate', user);
@@ -147,6 +146,34 @@ class PointService {
     axios.defaults.headers.common['Authorization'] = '';
   }
 
+  async getReviews() {
+    try {
+      const response = await axios.get(this.baseUrl + '/api/reviews');
+      return response.data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async getReview(id) {
+    try {
+      const response = await axios.get(this.baseUrl + '/api/reviews/' + id);
+      return response.data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async createReview(id, review) {
+    try {
+      const response = await axios.post(this.baseUrl + '/api/points/' + id + '/reviews', review);
+      return response.data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+
   async deleteAllReviews() {
     try {
       const response = await axios.delete(this.baseUrl + '/api/reviews');
@@ -156,6 +183,14 @@ class PointService {
     }
   }
 
+  async deleteOneReview(id) {
+    try {
+      const response = await axios.delete(this.baseUrl + '/api/reviews/' + id);
+      return response.data;
+    } catch (e) {
+      return null;
+    }
+  }
 
 
 }

@@ -39,14 +39,12 @@
     "costalZone": "The Mid East"
   },
   "newUser": {
-    "_id": "5ed3d85379d99e54389f0d13",
     "firstName": "Maggie",
     "lastName": "Simpson",
     "email": "maggie@simpson.com",
     "password": "secret"
   },
   "newPoint": {
-    "_id": "5ebff03cb9bba326186bccbf",
     "name": "**Illaunloo**",
      "coordinates": {
         "lat": 53.15130256,
@@ -169,16 +167,17 @@
   "reviews": [
     {
       "comment": "This was a very pleasant day",
-      "star": "4"
+      "star": 4
     },
     {
       "comment": "This was a very pleasant day",
-      "star": "4"
+      "star": 4
     }
   ],
   "newReview": {
-    "comment": "This was a not fun",
-    "star": "4"
+      "_id": "5ebff03cb9bhu326186bcchu",
+      "comment": "This was a not fun",
+      "star": 4
   }
 }
 
