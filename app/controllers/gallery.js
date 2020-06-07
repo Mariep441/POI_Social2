@@ -5,6 +5,7 @@ const ImageStore = require('../utils/image-store');
 const Point = require('../models/point');
 const Image = require('../models/image');
 
+
 const cloudinary = require('cloudinary');
 const fs = require('fs');
 const util = require('util');
@@ -58,8 +59,9 @@ const Gallery = {
   deleteImage: {
     handler: async function(request, h) {
       try {
-        await ImageStore.deleteImage(request.params._id)
-        await Point.Image.splice(0,1);
+        const _id = request.params._id
+        await ImageStore.deleteImage(_id)
+
         return h.redirect('/home');
 
       } catch (err) {

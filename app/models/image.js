@@ -24,13 +24,18 @@ const imageSchema = new Schema({
 
 });
 
+imageSchema.statics.findById = function(_id) {
+  return this.findOne({ public_id : _id});
+};
+
+
 imageSchema.statics.findAndUpdateById = function(_id) {
   return this.findOneAndUpdate({ _id : _id}, {new: true});
 };
 
 
-imageSchema.statics.remove_image = function(_id) {
-  return this.splice(0,1);
+imageSchema.statics.findAndRemoveById = function(_id) {
+  return this.findOneAndDelete({ public_id: _id });
 };
 
 
