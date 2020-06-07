@@ -7,7 +7,7 @@ const Mongoose = require('mongoose');
 Mongoose.set('useNewUrlParser', true);
 Mongoose.set('useUnifiedTopology', true);
 
-Mongoose.connect(process.env.db);
+Mongoose.connect('mongodb+srv://POI:POI123@cluster0-d2okb.mongodb.net/test?retryWrites=true&w=majority');
 const db = Mongoose.connection;
 
 async function seed() {

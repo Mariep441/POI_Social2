@@ -28,8 +28,8 @@ async function init() {
 
   server.auth.strategy('session', 'cookie', {
     cookie: {
-      name: process.env.cookie_name,
-      password: process.env.cookie_password,
+      name: 'point-web',
+      password: 'secretpasswordnotrevealedtoanyone',
       isSecure: false
     },
     redirectTo: '/'
@@ -44,9 +44,9 @@ async function init() {
   server.auth.default('session');
 
   const credentials = {
-    cloud_name: process.env.name,
-    api_key: process.env.key,
-    api_secret: process.env.secret
+    cloud_name: 'drl4tdtjm',
+    api_key: '533142898429918',
+    api_secret: '4IgCzQm2GpWzABF6fRI0Ygfe6YI'
   };
 
   ImageStore.configure(credentials);
