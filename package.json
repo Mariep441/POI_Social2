@@ -21,7 +21,7 @@
     "handlebars": "^4.7.3",
     "handlebars-group-by": "^1.0.1",
     "hapi-auth-jwt2": "^10.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.15",
     "mais-mongoose-seeder": "^1.0.7",
     "mongoose": "^5.9.10"
